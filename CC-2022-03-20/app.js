@@ -9,13 +9,9 @@ function sumArray(array) {
       return 0
     }
     
-    var max = Math.max.apply(Math, array);
-    var min = Math.min.apply(Math, array);
-    var sum = 0
-    
-    for (i = 0; i < array.length; i++) {
-      sum += array[i];
-     }
+    const max = Math.max.apply(Number,array);
+    const min = Math.min.apply(Number,array);
+    let sum = array.reduce((acc,c)=> acc + c, 0);
   
-    return sum - max - min
+    return sum - max - min;
   }
